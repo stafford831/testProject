@@ -1,0 +1,62 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: blinov
+      changes:
+        - createTable:
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar (200)
+                  constraints:
+                    unique: false
+                    nullable: false
+              - column:
+                  name: latitude
+                  type: double
+                  constraints:
+                    unique: false
+                    nullable: false
+              - column:
+                  name: longitude
+                  type: double
+                  constraints:
+                    unique: false
+                    nullable: false
+        - createTable:
+            tableName: distance
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: from_city
+                  type: varchar(200)
+                  constraints:
+                    unique: false
+                    nullable: false
+              - column:
+                  name: to_city
+                  type: varchar(200)
+                  constraints:
+                    unique: false
+                    nullable: false
+              - column:
+                  name: distance
+                  type: double
+                  constraints:
+                    unique: false
+                    nullable: false
+

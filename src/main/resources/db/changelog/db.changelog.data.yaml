@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: blinov
+      changes:
+        - loadData:
+            encoding: UTF-8
+            file: csv/city.csv
+            tableName: city
+        - loadData:
+            encoding: UTF-8
+            file: csv/distance.csv
+            tableName: distance
